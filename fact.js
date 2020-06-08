@@ -1,20 +1,11 @@
+function fact(myArg1, n) {
 
-function fact(myArg) {
+  if (n == 0) {
+    return 1;
+  } else {
+    return fact(myArg1, n - 1) * (n);
+  }
+  }
 
   var myArg = process.argv[2];
-  console.log('myArg: ', myArg);
-  
-  var myFactArg = myArg;
-  
-  for(var i = 0; i < myArg - 1; i++) {
-  
-    myFactArg = myFactArg * (i + 1);
-    console.log(myFactArg);
-  }
-  
-  return myFactArg;
-  
-  }
-  
-  console.log(fact());
-  
+  console.log(fact(myArg,myArg)) ;
